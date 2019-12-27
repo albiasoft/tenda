@@ -1,0 +1,45 @@
+{
+  "name": "tenda-cli",
+  "version": "0.0.0",
+  "description": "CLI used to generate Tenda projects.",
+  "license": "MIT",
+  "homepage": "https://github.com/albiasoft/tenda",
+  "keywords": [
+    "tenda-cli",
+    "tenda",
+    "cli",
+    "create",
+    "generate"
+  ],
+  "scripts": {
+    "build": "npm install"
+  },
+  "main": "./index.js",
+  "bin": {
+    "tenda": "./index.js"
+  },
+  "files": [
+    "tenda.js",
+    "index.js"
+  ],
+  "dependencies": {
+    "commander": "^2.20.0",
+    "tenda-generate-project": "0.0.0"
+  },
+  "author": {
+    "email": "anadalg@gmail.com",
+    "name": "Albert Nadal Garriga",
+    "url": "http://albiasoft.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/albiasoft/tenda.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albiasoft/tenda/issues"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "lerna": "^3.19.0"
+  },
+  "scripts": {
+    "setup": "npm install && npm run build",
+    "build": "lerna link && lerna run --stream build --no-private"
+  },
+  "author": {
+    "email": "anadalg@gmail.com",
+    "name": "Albert Nadal Garriga",
+    "url": "http://albiasoft.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/albiasoft/tenda.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albiasoft/tenda/issues"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "name": "tenda-monorepo",
+  "workspaces": [
+    "packages/*"
+  ]
+}

@@ -1,1 +1,3 @@
 # tenda
+
+npm run setup

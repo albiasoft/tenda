@@ -1,0 +1,36 @@
+{
+  "name": "tenda-generate-project",
+  "version": "0.0.0",
+  "description": "Generate a new Tenda project.",
+  "license": "MIT",
+  "homepage": "https://github.com/albiasoft/tenda",
+  "keywords": [
+    "generate",
+    "generator",
+    "tenda"
+  ],
+  "scripts": {
+    "build": "npm install"
+  },
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {},
+  "author": {
+    "email": "anadalg@gmail.com",
+    "name": "Albert Nadal Garriga",
+    "url": "http://albiasoft.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/albiasoft/tenda.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albiasoft/tenda/issues"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  }
+}
