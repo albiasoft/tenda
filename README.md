@@ -1,3 +1,3 @@
 # tenda
 
-npm run setup
+npm run init
