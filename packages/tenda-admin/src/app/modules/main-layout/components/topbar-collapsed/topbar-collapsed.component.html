@@ -1,0 +1,10 @@
+<button class="topbar-btn" type="button" (click)="toggle()">
+  <ng-content select="mat-icon"></ng-content>
+  <div class="btn-new-label" *ngIf="isNew">
+    <div></div>
+  </div>
+</button>
+<button class="btn-back" type="button" *ngIf="!isCollapsed" (click)="toggle()"></button>
+<div [collapse]="isCollapsed" class="topbar-collapse-wrap">
+  <ng-content select=".content-collapse"></ng-content>
+</div>

@@ -1,0 +1,14 @@
+<div class="topbar">
+    <div class="topbar-left">
+      <button class="btn-sidebar-collapse" type="button" (click)="changeSidebarVisibility()">
+        <img [src]="icon" alt="" class="icon" />
+      </button>
+      <button class="btn-sidebar-collapse mobile" type="button" (click)="changeMobileSidebarVisibility()">
+        <img [src]="icon" alt="" class="icon" />
+      </button>
+      <a class="logo" [ngClass]="{'dark-theme': !(isLightTheme | async)}" routerLink="/dashboard_default"></a>
+    </div>
+      <div class="topbar-right">
+      <app-profile-widget></app-profile-widget>
+    </div>
+</div>

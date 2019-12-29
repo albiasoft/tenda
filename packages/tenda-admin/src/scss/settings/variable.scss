@@ -1,0 +1,82 @@
+$themes: (
+  light: (
+    colorBackground: white,
+    colorBackgroundBody: #f2f4f7,
+    colorText: #646777,
+    colorTextAdditional: #646777,
+    logoImg: url(../assets/images/logo/logo_light.png),
+    colorHover: #fafbfe,
+    colorFolderHover: #f0eeee,
+    colorBorder: #eff1f5,
+    colorIcon: #dddddd,
+    imgInvert: invert(0%),
+    colorFieldsBorder: #f2f4f7,
+    colorBubble: rgba(242, 244, 247, 0.65),
+    colorBubbleActive: rgba(234, 238, 255, 0.6),
+    colorScrollbar: #B4BFD0,
+    colorFitness: #646777,
+  ),
+  dark: (
+    colorBackground: #232329,
+    colorBackgroundBody: #2a2a31,
+    colorText: #dddddd,
+    colorTextAdditional: #999999,
+    logoImg: url(../assets/images/logo/logo_dark.png),
+    colorHover: #38373f,
+    colorFolderHover: #ffffff1A,
+    colorBorder: #333246,
+    colorIcon: #605f7b,
+    imgInvert: invert(100%),
+    colorFieldsBorder: #33333a,
+    colorBubble: rgba(68, 79, 97, 0.65),
+    colorBubbleActive: rgba(92, 104, 156, 0.6),
+    colorScrollbar: #606071,
+    colorFitness: #ffffff
+  )
+);
+
+$color-accent: #4ce1b6;
+$color-accent-hover: darken($color-accent, 10%);
+
+$color-ng-accent: #c05085;
+$color-ng-accent-hover: darken($color-ng-accent, 10%);
+
+$color-additional: #999999;
+$color-additional-hover: darken($color-additional, 10%);
+
+$color-yellow: #f6da6e;
+$color-yellow-hover: darken($color-yellow, 10%);
+
+$color-violet: #c88ffa;
+
+$color-red: #ff4861;
+$color-red-hover: darken($color-red, 10%);
+
+$color-pink: #ffa2cc;
+$color-pink-hover: darken($color-pink, 10%);
+
+$color-blue: #70bbfd;
+$color-blue-hover: darken($color-blue, 10%);
+
+$color-gray: #787985;
+$color-light-gray: #d8dfe9;
+
+$color-green: #b8e986;
+$color-green-hover: darken($color-green, 10%);
+
+@mixin progressBarColored($main-color) {
+  .progress-bar {
+    background-color: $main-color;
+  }
+}
+
+@mixin progressBarColoredGradient($main-color) {
+  .progress-bar {
+    background-color: unset;
+    background-image: linear-gradient(to left, lighten($main-color, 10%), $main-color);
+  }
+
+  .progress-label {
+    color: $main-color;
+  }
+}

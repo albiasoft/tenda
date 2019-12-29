@@ -1,0 +1,15 @@
+<div class="sidebar-category-wrap" [ngClass]="{'opened': !isCollapsed}">
+  <button class="sidebar-link sidebar-category" type="button" (click)="toggle()">
+    <span class="sidebar-link-icon lnr" [ngClass]="iconName" *ngIf="icon"></span>
+    <p class="sidebar-link-title">
+      {{title}}
+      <span class="sidebar-category-new" *ngIf="isNew"></span>
+    </p>
+    <span class="sidebar-category-icon lnr lnr-chevron-right"></span>
+  </button>
+  <div [collapse]="isCollapsed" class="sidebar-submenu-wrap">
+    <ul class="sidebar-submenu">
+      <ng-content></ng-content>
+    </ul>
+  </div>
+</div>

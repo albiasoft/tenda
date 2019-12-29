@@ -1,0 +1,14 @@
+<button class="avatar" type="button" (click)="toggle()">
+  <img class="avatar-img" [src]="ava" alt="avatar" />
+  <p class="avatar-name">Roman Johanson</p>
+  <mat-icon>expand_more</mat-icon>
+</button>
+<button class="btn-back" type="button" *ngIf="!isCollapsed" (click)="toggle()"></button>
+<div [collapse]="isCollapsed" class="menu-wrap">
+  <div class="menu">
+    <app-sidebar-link route="/pages/first">First Page</app-sidebar-link>
+    <app-sidebar-link route="/pages/second">Second Page</app-sidebar-link>
+    <div class="menu-divider"></div>
+    <app-sidebar-link icon="exit" route="/login" (click)="toggle()">Log Out</app-sidebar-link>
+  </div>
+</div>

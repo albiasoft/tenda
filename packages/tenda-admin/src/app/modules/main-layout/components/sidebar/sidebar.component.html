@@ -1,0 +1,24 @@
+<div class="sidebar" [ngClass]="{
+  'sidebar-collapse': (isCollapsed$ | async),
+  'top-menu-active': (isTopMenuActive$ | async),
+  'show-mobile': !(isMobileCollapsed$ | async)}">
+  <section class="content-container">
+    <perfect-scrollbar style="max-width: 600px; height: 95vh; overflow: visible">
+      <div class="scrollable-content">
+        <ul class="sidebar-block">
+          <app-sidebar-link icon="exit" route="/">Log Out</app-sidebar-link>
+          <app-sidebar-category title="Layout" icon="layers">
+            <app-sidebar-button (click)="changeToLight()">Light Theme</app-sidebar-button>
+            <app-sidebar-button (click)="changeToDark()">Dark Theme</app-sidebar-button>
+          </app-sidebar-category>
+        </ul>
+        <ul class="sidebar-block">
+          <app-sidebar-category title="Example Pages" icon="diamond">
+            <app-sidebar-link route="/pages/first">First Page</app-sidebar-link>
+            <app-sidebar-link route="/pages/second">Second Page</app-sidebar-link>
+          </app-sidebar-category>
+        </ul>
+      </div>
+    </perfect-scrollbar>
+  </section>
+</div>

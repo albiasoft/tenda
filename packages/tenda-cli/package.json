@@ -12,7 +12,7 @@
     "generate"
   ],
   "scripts": {
-    "build": "npm install"
+    "setup": "npm install"
   },
   "main": "./index.js",
   "bin": {
@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "commander": "^2.20.0",
-    "tenda-generate-project": "0.0.0"
+    "tenda-create-project": "0.0.0"
   },
   "author": {
     "email": "anadalg@gmail.com",

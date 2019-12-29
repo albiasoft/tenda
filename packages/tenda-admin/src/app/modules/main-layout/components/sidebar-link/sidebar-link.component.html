@@ -1,0 +1,9 @@
+<li class="">
+  <a [routerLink]="route" class="sidebar-link" routerLinkActive="sidebar-link-active" (click)="hideSidebar()">
+    <span class="sidebar-link-icon lnr" [ngClass]="iconName" *ngIf="icon"></span>
+    <p class="sidebar-link-title">
+      <ng-content></ng-content>
+      <span class="badge sidebar-link-badge d-flex justify-content-center align-items-center" *ngIf="newLink"><span>New</span></span>
+    </p>
+  </a>
+</li>

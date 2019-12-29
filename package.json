@@ -1,13 +1,18 @@
 {
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "fs-extra": "^8.1.0"
+  },
   "devDependencies": {
     "cross-env": "^5.2.0",
     "lerna": "^3.19.0"
   },
   "scripts": {
-    "setup": "npm install && npm run build",
-    "build": "lerna link && lerna run --stream build --no-private"
+    "init": "npm install && npm run setup && npm run build",
+    "setup": "lerna link && lerna run --stream setup --no-private",
+    "build": "lerna run --stream build --no-private && npm run post-build-script",
+    "post-build-script": "node scripts/post-build-script.js"
   },
   "author": {
     "email": "anadalg@gmail.com",

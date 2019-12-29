@@ -1,0 +1,152 @@
+@import "settings/variable";
+
+.dashboard {
+
+  .table {
+    color: var(--colorTextAdditional);
+    margin-bottom: 0;
+
+    thead th {
+      border-top: none;
+      border-bottom: 2px solid var(--colorBorder);
+      color: var(--colorText);
+    }
+
+    tbody td {
+      padding: 10px;
+      vertical-align: middle;
+      position: relative;
+      border-top: 1px solid var(--colorBorder);
+    }
+  }
+
+  .dashboard-widget {
+
+    .mat-expansion-panel {
+
+      .mat-expansion-panel-header-title {
+        padding: 20px 0 0;
+      }
+    }
+
+
+    .mat-expansion-panel-content {
+
+      .mat-expansion-panel-body {
+        padding: 0 16px 24px 16px;
+      }
+    }
+  }
+
+  .ngx-charts {
+    .tick text {
+      fill: #999999;
+      opacity: 0.6;
+      font-size: 11px;
+    }
+
+    .tooltip-anchor {
+      fill: #999999!important;
+    }
+
+    .gridline-path {
+      stroke: #ccc!important;
+      opacity: 0.2;
+    }
+
+    .area-series {
+
+      .area {
+        opacity: 0.4!important;
+      }
+    }
+  }
+
+  .chart-with-legend {
+
+    .ngx-charts {
+      margin-bottom: 20px;
+
+    }
+
+    .chart-legend {
+
+      .legend-labels {
+        display: flex;
+        justify-content: center;
+        background: transparent;
+
+        .legend-label-color {
+          opacity: 0.4;
+        }
+
+        .legend-label-text {
+          font-size: 11px;
+          color: var(--colorText);
+        }
+      }
+    }
+  }
+
+  &.dashboard-default {
+
+    .table {
+      &.table-audience {
+        .progress-wrap {
+          .progress {
+            height: 10px;
+          }
+
+          .progress-bar {
+            background-color: $color-blue;
+          }
+        }
+
+        .audience-table-flag {
+          width: 44px;
+          height: 32px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+  }
+
+  .gauge.chart {
+
+    .background-arc{
+      path {
+        fill: #f2f4f7;
+      }
+    }
+
+    text {
+      transform: none;
+      margin: 0;
+      font-size: 38px;
+      fill: var(--colorText);
+    }
+  }
+}
+
+.ng-dropdown-content {
+  border-radius: 3px;
+  background-color: var(--colorBackground);
+  padding: 5px 0;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,.05);
+  transform: translateX(-20px);
+
+  .dropdown-in-table {
+    padding: 5px 0;
+    list-style: none;
+  }
+
+  .dropdown-item {
+    color: var(--colorText);
+  }
+
+  .dropdown-item.active,
+  .dropdown-item:active {
+    background-color: var(--colorHover);
+  }
+}

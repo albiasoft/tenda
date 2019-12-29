@@ -1,7 +1,7 @@
 {
-  "name": "tenda-generate-project",
+  "name": "tenda-create-project",
   "version": "0.0.0",
-  "description": "Generate a new Tenda project.",
+  "description": "Create a new Tenda project.",
   "license": "MIT",
   "homepage": "https://github.com/albiasoft/tenda",
   "keywords": [
@@ -10,13 +10,22 @@
     "tenda"
   ],
   "scripts": {
-    "build": "npm install"
+    "setup": "npm install"
   },
   "main": "./lib/index.js",
   "directories": {
     "lib": "./lib"
   },
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "execa": "^1.0.0",
+    "fs-extra": "^8.0.1",
+    "lodash": "^4.17.11",
+    "node-fetch": "^1.7.3",
+    "node-machine-id": "^1.1.10",
+    "ora": "^3.4.0",
+    "uuid": "^3.3.2"
+  },
   "author": {
     "email": "anadalg@gmail.com",
     "name": "Albert Nadal Garriga",

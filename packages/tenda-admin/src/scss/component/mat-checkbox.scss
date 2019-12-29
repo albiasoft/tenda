@@ -1,0 +1,211 @@
+@mixin styledCheckbox($main-color, $checkmark-color) {
+  &.mat-checkbox {
+
+    .mat-checkbox-inner-container {
+      width: 18px;
+      height: 18px;
+    }
+
+    .mat-checkbox-frame {
+      border-color: $main-color;
+      background-color: $main-color;
+    }
+
+    .mat-checkbox-checkmark-path {
+      stroke: $checkmark-color!important;
+    }
+
+    &:hover {
+      .mat-checkbox-frame {
+        border-color: $main-color;
+      }
+      .mat-checkbox-label {
+        color: $main-color;
+      }
+    }
+
+    &.mat-checkbox-disabled {
+      opacity: 0.4;
+    }
+
+    &.mat-checkbox:not(.mat-checkbox-disabled) {
+      .mat-checkbox-ripple {
+        .mat-ripple-element {
+          background-color: $main-color;
+        }
+      }
+    }
+
+    &.mat-checkbox-checked {
+      .mat-checkbox-background {
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+.checkbox-themed {
+
+  .mat-checkbox {
+    transition: all 0.3s;
+
+    .mat-checkbox-inner-container {
+      width: 18px;
+      height: 18px;
+    }
+
+    .mat-checkbox-label {
+      color: var(--colorText);
+      transition: all 0.3s;
+    }
+
+    .mat-checkbox-frame {
+      border-color: var(--colorIcon);
+      border-width: 1px;
+    }
+
+    &:not(.mat-checkbox-disabled) {
+      .mat-checkbox-ripple {
+        .mat-ripple-element {
+          background-color: transparent;
+        }
+      }
+
+      &:hover {
+        .mat-checkbox-frame {
+          border-color: $color-accent;
+        }
+        .mat-checkbox-label {
+          color: $color-accent;
+        }
+      }
+
+      &.mat-checkbox-checked {
+        .mat-checkbox-background {
+          background-color: transparent;
+        }
+      }
+
+      .mat-checkbox-checkmark-path {
+        stroke: $color-accent !important;
+      }
+    }
+
+    &.mat-checkbox-disabled {
+
+      .mat-checkbox-frame {
+        border-color: var(--colorFieldsBorder);
+        background-color: var(--colorHover);
+      }
+
+
+      &.mat-checkbox-checked {
+        .mat-checkbox-background {
+          background-color: transparent;
+        }
+      }
+
+      .mat-checkbox-checkmark-path {
+        stroke: var(--colorDisabled) !important;
+      }
+
+      .mat-checkbox-label {
+        color: var(--colorDisabled);
+      }
+    }
+
+    &.mat-checkbox-indeterminate {
+      .mat-checkbox-mixedmark {
+        background-color: $color-accent !important;
+      }
+
+      .mat-checkbox-background {
+        background-color: transparent;
+      }
+    }
+
+    &.checkbox-colored {
+
+      .mat-checkbox-frame {
+        border-color: $color-accent;
+        background-color: $color-accent;
+      }
+
+      .mat-checkbox-checkmark-path {
+        stroke: #fff!important;
+      }
+
+      &.mat-checkbox-disabled {
+        .mat-checkbox-frame {
+          opacity: 0.4;
+        }
+      }
+    }
+
+    &.checkbox-bold {
+
+      &.mat-checkbox-indeterminate {
+        .mat-checkbox-mixedmark {
+          background-color: #fff!important;
+        }
+
+        .mat-checkbox-background {
+          background-color: $color-accent;
+        }
+      }
+
+      &.mat-checkbox-checked {
+        .mat-checkbox-background {
+          background-color: $color-accent;
+        }
+
+        &.mat-checkbox-disabled {
+          .mat-checkbox-background {
+            opacity: 0.4;
+          }
+        }
+      }
+
+      .mat-checkbox-checkmark-path {
+        stroke: #fff!important;
+      }
+    }
+
+  }
+
+  .medium-turquoise {
+    @include styledCheckbox(#4ce1b6, #fff);
+  }
+
+  .steel-blue {
+    @include styledCheckbox(#70bbfd, #fff);
+  }
+
+  .violet-red {
+    @include styledCheckbox(#fa4a86, #fff);
+  }
+
+  .light-golden-rod {
+    @include styledCheckbox(#f6da6e, #fff);
+  }
+
+  .olive-drab {
+    @include styledCheckbox(#7ed321, #fff);
+  }
+
+  .dark-orchid {
+    @include styledCheckbox(#b635ba, #fff);
+  }
+
+  .indian-red {
+    @include styledCheckbox(#ff4861, #fff);
+  }
+
+  .aqua-medium {
+    @include styledCheckbox(#38c3d7, #fff);
+  }
+
+  .orange {
+    @include styledCheckbox(#f98330, #fff);
+  }
+}

@@ -2,7 +2,7 @@
 
 const commander = require('commander');
 const packageJson = require('./package.json');
-const generateNewProject = require('tenda-generate-project');
+const generateNewProject = require('tenda-create-project');
 
 const program = new commander.Command(packageJson.name);
 

@@ -1,0 +1,120 @@
+@import "settings/variable";
+
+:host {
+  position: relative;
+
+  .dropdown-toggler {
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0;
+    border: none;
+    transition: all 0.3s;
+    box-shadow: none;
+    padding: 0 15px;
+    background-color: transparent;
+
+    .mat-icon {
+      margin: auto 0 auto 8px;
+      height: 18px;
+      color: #b1c3c8;
+      font-size: 18px;
+    }
+
+    &:hover, &:focus, &:active, &:focus:active {
+      background-color: var(--colorHover);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+}
+
+
+.avatar-img {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+}
+
+.dropdown-title {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  display: none;
+  margin-left: 10px;
+
+  color: var(--colorText);
+}
+
+.btn-back {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  border: none;
+}
+
+.menu {
+  width: 240px;
+  border-radius: 0;
+  border: none;
+  padding: 15px 0;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+  margin-top: 0;
+  list-style: none;
+  border-top: 2px solid $color-accent;
+  overflow: visible;
+
+  background: var(--colorBackground);
+
+  button {
+    padding: 0;
+
+    &:hover {
+      background-color: var(--colorHover);
+    }
+  }
+
+  *:focus {
+    outline: none;
+  }
+}
+
+.menu-wrap {
+  z-index: 101;
+  position: absolute;
+  width: 100%;
+  padding: 0 10px;
+  min-width: 220px;
+  left: 0;
+}
+
+.menu-divider {
+  margin: 15px 0;
+  border-top: 1px solid var(--colorBorder);
+}
+
+@media screen and (min-width: 480px) {
+
+  .dropdown-title {
+    display: block;
+  }
+
+  .menu {
+    left: 0 !important;
+  }
+
+}

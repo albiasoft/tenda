@@ -1,0 +1,19 @@
+<app-topbar></app-topbar>
+<app-sidebar></app-sidebar>
+<app-sidebar class="mobile" [isMobile]="true"></app-sidebar>
+<notifier-container></notifier-container>
+<div class="container-wrap" [ngClass]="{'sidebar-collapsed': isSidebarCollapsed, 'top-menu-active': (isTopMenuActive | async)}">
+  <router-outlet></router-outlet>
+</div>
+
+<ng-template #greetingNotification>
+  <div class="notification">
+    <h5 class="bold-text">👋 Welcome to the ngEasyDev!</h5>
+    <p>
+      You have successfully registered in the ngEasyDev. Now you can start to explore the
+      dashboard
+      interface with a bunch of components and applications. Enjoy!
+    </p>
+    <button class="close" type="button" (click)="closeNotification()"><span class="lnr lnr-cross"></span></button>
+  </div>
+</ng-template>

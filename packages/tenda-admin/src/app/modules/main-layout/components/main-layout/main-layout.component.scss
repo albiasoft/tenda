@@ -1,0 +1,106 @@
+@import '~src/scss/settings/variable.scss';
+
+.content-container {
+  position: relative;
+
+  overflow: auto;
+  height: 300px;
+  min-height: 0;
+  margin: 8px 16px;
+  border-radius: 4px;
+
+  background-color: #bababa;
+}
+
+.content-container {
+  position: relative;
+
+  min-height: 0;
+  padding: 8px;
+  margin: 12px 16px;
+  border: 1px solid #ccc;
+}
+
+.scrollable-content {
+  background-color: #ffffff;
+}
+
+.container-wrap {
+  padding-left: 0;
+  padding-top: 90px;
+  min-height: 100vh;
+  transition: padding-left 0.3s;
+
+  background: var(--colorBackgroundBody);
+
+  &.sidebar-collapsed {
+    padding-left: 60px;
+
+    @media screen and (max-width: 576px) {
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    padding-left: 250px;
+  }
+
+  &.top-menu-active {
+    @media screen and (min-width: 576px) {
+      padding-left: 0;
+    }
+  }
+}
+
+.layout {
+
+  &.layout--collapse {
+
+    & + .container-wrap {
+      padding-left: 0;
+
+      @media screen and (min-width: 576px) {
+      }
+    }
+  }
+
+  &.layout--top-navigation {
+
+    & + .container-wrap{
+
+      @media screen and (min-width: 576px) {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .notifier__notification {
+    padding: 0;
+    background-color: var(--colorBackground) !important;
+
+    .notification {
+      position: relative;
+      max-width: 400px;
+      padding: 20px 40px 20px 25px;
+      color: var(--colorText);
+
+      .close {
+        color: var(--colorText);
+        opacity: 0.2;
+        font-weight: 100;
+        right: 20px;
+        font-size: 14px;
+        line-height: 14px;
+        position: absolute;
+        top: 20px;
+        text-shadow: none;
+
+        &:focus, &:active, &:active:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

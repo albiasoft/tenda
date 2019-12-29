@@ -1,0 +1,109 @@
+@import "component/sidebar-link";
+
+//:host(.sidebar-collapse),
+
+//:host-context(.sidebar-collapse) {
+//  .sidebar-link {
+//    overflow: hidden;
+//    width: 55px;
+//    background-color: rebeccapurple;
+//  }
+//
+//  .sidebar-category-wrap {
+//
+//    &.opened {
+//
+//      .sidebar-submenu-wrap.show {
+//        position: absolute;
+//        transition: 0.3s;
+//      }
+//
+//      &:hover {
+//        .sidebar-submenu-wrap.show {
+//          width: 185px;
+//          left: 55px;
+//          overflow: hidden;
+//        }
+//      }
+//    }
+//  }
+//}
+
+////
+////:host-context(.sidebar-collapse) .sidebar-link {
+////    //background-color: #8d992d;
+////}
+////
+//:host-context(.sidebar-submenu) {
+//  .sidebar-link {
+//    &:hover {
+//      background-color: var(--colorBackground);
+//    }
+//  }
+//}
+//
+//.sidebar-link {
+//  &.sidebar-link-active:before {
+//    opacity: 1;
+//  }
+//}
+//
+//.sidebar-link {
+//  height: 36px;
+//  width: 240px;
+//  transition: all 0.3s;
+//  position: relative;
+//  cursor: pointer;
+//  display: flex;
+//  padding: 11px 20px;
+//  overflow: hidden;
+//  background: transparent;
+//  border: none;
+//
+//  color: var(--colorText);
+//
+//  &:before {
+//    content: "";
+//    position: absolute;
+//    left: 0;
+//    top: 0;
+//    height: 100%;
+//    width: 2px;
+//    background: $color-accent;
+//    opacity: 0;
+//    transition: all 0.3s;
+//  }
+//
+//  p {
+//    position: absolute;
+//    left: 43px;
+//    width: 180px;
+//    transition: left 0.3s;
+//    top: 50%;
+//    transform: translateY(-50%);
+//  }
+//
+//  &:hover {
+//    text-decoration: none;
+//    background-color: var(--colorHover);
+//
+//    &:before {
+//      opacity: 1;
+//    }
+//  }
+//}
+//
+//.sidebar-link-title {
+//  margin: 0;
+//  font-size: 14px;
+//  line-height: 16px;
+//  position: relative;
+//  display: flex;
+//}
+//
+//.sidebar-link-icon {
+//  margin-right: 10px;
+//  font-size: 13px;
+//  line-height: 13px;
+//  color: #b1c3c8;
+//}
