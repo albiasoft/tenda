@@ -9,7 +9,7 @@ const uuid = require('uuid/v4');
 
 const createProject = require('./create-project');
 
-module.exports = (projectDirectory, cliArguments) => {
+module.exports = (projectDirectory) => {
   checkRequirements();
 
   const rootPath = resolve(projectDirectory);
@@ -21,24 +21,24 @@ module.exports = (projectDirectory, cliArguments) => {
   const scope = {
     rootPath,
     name: basename(rootPath),
-    quickstart: cliArguments.run === false ? false : true,
-    debug: cliArguments.debug !== undefined,
+    quickstart: true,
+    debug: true,
     uuid: uuid(),
     deviceId: machineIdSync(),
     tendaVersion: require('../package.json').version,
     tmpPath,
     installDependencies: true,
     tendaDependencies: [
-      'tenda',
-      'tenda-admin'
     ],
-    additionalsDependencies: {},
+    additionalsDependencies:
+    {
+      "chalk": "^2.4.2",
+      "fs-extra": "^8.0.1"
+    }
   };
 
   console.log(`Creating a new Tenda project at ${chalk.green(rootPath)}.`);
   console.log();
-
-  console.log(scope);
 
   return createProject(scope).catch(error => {
     console.error(error);

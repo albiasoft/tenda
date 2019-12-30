@@ -16,7 +16,7 @@ module.exports = opts => {
     version: '0.0.0',
     description: 'A Tenda project',
     scripts: {
-      start: 'node api/server.js',
+      start: 'tenda start',
     },
     devDependencies: {},
     dependencies: Object.assign(

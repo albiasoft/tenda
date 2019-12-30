@@ -9,6 +9,7 @@ const ora = require('ora');
 const packageJSON = require('./resources/json/package.json');
 
 module.exports = async scope => {
+
   // check rootPath is empty
   if (await fse.exists(scope.rootPath)) {
     const stat = await fse.stat(scope.rootPath);
@@ -50,18 +51,6 @@ module.exports = async scope => {
   }
 
   console.log(`Running Tenda admin panel.`);
-
-  /*try {
-    await execa('npm', ['run', 'develop'], {
-      stdio: 'inherit',
-      cwd: scope.rootPath,
-      env: {
-        FORCE_COLOR: 1,
-      },
-    });
-  } catch (error) {
-    process.exit(1);
-  }*/
 };
 
 async function createProject(scope) {
@@ -90,6 +79,7 @@ async function createProject(scope) {
       join(rootPath, 'package.json'),
       packageJSON({
         tendaDependencies: scope.tendaDependencies,
+        additionalsDependencies: scope.additionalsDependencies,
         tendaVersion: scope.tendaVersion,
         projectName: scope.name,
         uuid: scope.uuid,
@@ -160,8 +150,8 @@ async function createProject(scope) {
 
   console.log('Available commands in your project:');
   console.log();
-  console.log(`  npm run start`);
-  console.log('  Start Tenda admin panel.');
+  console.log(`  ${chalk.green("tenda start")}`);
+  console.log('  Start the project admin panel on http://127.0.0.1:8080');
   console.log();
 }
 
