@@ -24,7 +24,7 @@
     "node-fetch": "^3.2.10",
     "node-machine-id": "^1.1.10",
     "ora": "^3.4.0",
-    "uuid": "^3.3.2"
+    "uuid": "^14.0.0"
   },
   "author": {
     "email": "anadalg@gmail.com",
